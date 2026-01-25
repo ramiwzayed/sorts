@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './bubble-sort.css',
+  selector: 'app-bubble-sort',
+  templateUrl: './bubble-sort.component.html',
+  styleUrls: ['./bubble-sort.css']
 })
-export class AppComponent implements OnInit {
-
+export class BubbleSortComponent {
   arr: number[] = [52, 14, 45, 21, 87];
 
   ngOnInit() {
@@ -15,10 +14,9 @@ export class AppComponent implements OnInit {
   }
 
   bubbleSort() {
-    let n = this.arr.length;
-
-    for (let i = 0; i < n - 1; i++) {
-      for (let j = 0; j < n - i - 1; j++) {
+    const num = this.arr.length;
+    for (let i = 0; i < num - 1; i++) {
+      for (let j = 0; j < num - i - 1; j++) {
         if (this.arr[j] > this.arr[j + 1]) {
           let temp = this.arr[j];
           this.arr[j] = this.arr[j + 1];
