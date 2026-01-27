@@ -6,23 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./bubble-sort.css']
 })
 export class BubbleSortComponent {
-  arr: number[] = [52, 14, 45, 21, 87];
-
-  ngOnInit() {
-    this.bubbleSort();
-    console.log(this.arr);
-  }
-
-  bubbleSort() {
-    const num = this.arr.length;
+  array: number[] = [52, 14, 45, 21, 87];
+  BubbleSortComponent() {
+    const num = this.array.length;
     for (let i = 0; i < num - 1; i++) {
       for (let j = 0; j < num - i - 1; j++) {
-        if (this.arr[j] > this.arr[j + 1]) {
-          let temp = this.arr[j];
-          this.arr[j] = this.arr[j + 1];
-          this.arr[j + 1] = temp;
+        if (this.array[j] > this.array[j + 1]) {
+          let temp = this.array[j];
+          this.array[j] = this.array[j + 1];
+          this.array[j + 1] = temp;
         }
       }
     }
   }
+
+
 }
