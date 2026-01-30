@@ -7,15 +7,16 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: '<div>App Component</div>'
 })
-export class AppComponent {
+export class MergeSortComponent {
   title = 'Merge Sort';
 }
-
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
-  ]
+    MergeSortComponent
+  ],
+  // ...
 })
+
 export class MergeSortModule { }
