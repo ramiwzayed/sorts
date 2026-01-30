@@ -5,11 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class quickSort {
-  quickSortArray() {
-    this.array = this.quickSort(this.array);
-  }
   array: number[] = [8, 3, 1, 14, 2, 5];
-
 
 
   quickSort(arr: number[]): number[] {
@@ -29,10 +25,5 @@ export class quickSort {
       }
     }
 
-    return [
-      ...this.quickSort(left),
-      pivot,
-      ...this.quickSort(right)
-    ];
   }
 }
