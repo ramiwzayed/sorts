@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class BubbleSortComponent {
   array: number[] = [52, 14, 45, 21, 87];
-  BubbleSortComponent() {
+  BubbleSortComponent(array: number[]) {
     const num = this.array.length;
     for (let i = 0; i < num - 1; i++) {
       for (let j = 0; j < num - i - 1; j++) {
